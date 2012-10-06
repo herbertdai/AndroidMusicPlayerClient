@@ -41,4 +41,17 @@ public class MusicServiceManager {
     		
     	}
     }
+    
+    /**
+     * Stop the music and the service;
+     */
+    public void stop() {
+    	if (mService != null) {
+    		try {
+    			mService.stop();
+    		} catch (RemoteException e) {
+    			e.printStackTrace();
+    		}
+    	}
+    }
 }

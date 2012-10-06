@@ -25,6 +25,9 @@ public class MusicClient extends Activity implements OnClickListener{
 	    
 	    Button playPauseBtn = (Button)findViewById(R.id.play_pause);
 	    playPauseBtn.setOnClickListener(this);
+	    
+	    Button stopBtn = (Button)findViewById(R.id.stop);
+	    stopBtn.setOnClickListener(this);
 	}
 
 	
@@ -42,6 +45,13 @@ public class MusicClient extends Activity implements OnClickListener{
 				}
 			}
 			break;
+		case R.id.stop:
+			if (mServiceConnection.isServiceConnected()) {
+				MusicServiceManager manager = mServiceConnection.getManager();
+				if (manager != null) {
+					manager.stop();
+				}
+			}
 		default:
 			break;
 		}

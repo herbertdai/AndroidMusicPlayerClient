@@ -12,4 +12,10 @@
            android:layout_height="wrap_content"
            android:text="Play/Pause"
            />
+       <Button
+           android:id="@+id/stop"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Stop"
+           />
     </LinearLayout>

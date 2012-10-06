@@ -13,5 +13,7 @@ interface IMusicService
     
     int getState();
     
+    void stop();
+    
 
 } 
