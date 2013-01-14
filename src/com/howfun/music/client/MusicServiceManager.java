@@ -2,6 +2,7 @@ package com.howfun.music.client;
 import java.util.ArrayList;
 
 import com.howfun.music.control.IMusicService;
+import com.howfun.music.control.MusicData;
 
 
 import android.graphics.Bitmap;
@@ -54,4 +55,18 @@ public class MusicServiceManager {
     		}
     	}
     }
+    
+    public MusicData getMusicData() {
+    	MusicData data = null;
+
+    	if (mService != null) {
+    		try {
+    			data = mService.getMusicData();
+    		} catch (Exception e ) {
+    			e.printStackTrace();
+    		}
+    	}
+    	return data;
+    }
+
 }

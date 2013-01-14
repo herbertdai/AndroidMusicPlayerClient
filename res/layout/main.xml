@@ -6,6 +6,14 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="5dp">
+
+        <TextView
+            android:id="@+id/music_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Music title"
+            android:textSize="24sp" />
+
        <Button
            android:id="@+id/play_pause"
            android:layout_width="fill_parent"
